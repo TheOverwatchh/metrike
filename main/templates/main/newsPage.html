@@ -1,0 +1,16 @@
+{% extends 'main/layout.html' %}
+
+    {% block head %}
+        <link href="../../static/main/newsPage.css" rel="stylesheet">
+    {% endblock %}
+
+    {% block title %}   Metrike | {{ news.titulo }}    {% endblock %}
+
+
+    {% block body %}
+    <div class="noticiaContainer">
+        <img src="http://source.unsplash.com/random/500x250" alt="Imagem da notícia">
+        <h2>{{ news.titulo }}</h2>
+        <p>{{ news.descricao }}</p>
+    </div>
+    {% endblock %}    
