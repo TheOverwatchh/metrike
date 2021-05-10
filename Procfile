@@ -1,1 +1,1 @@
-web: gunicorn metrike.wsgi --log-file -
+web: gunicorn metrike.wsgi
