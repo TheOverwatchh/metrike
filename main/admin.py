@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import News, Parceiros
+from .models import News
 
 
 # class NewsAdmin(admin.ModelAdmin):
@@ -8,7 +8,6 @@ from .models import News, Parceiros
 # 		model = News
 # Register your models here.
 admin.site.register(News)
-admin.site.register(Parceiros)
 
 
 # superuser user:micaeltargino  password: access2000

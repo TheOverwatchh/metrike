@@ -1,7 +1,9 @@
 {% extends 'main/layout.html' %}
+{% load static %}
 
     {% block head %}
      <link href="../../static/main/global.css" rel="stylesheet"> 
+     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
      {% endblock %}
 
     {% block title %} 
@@ -9,60 +11,165 @@
     {% endblock %}
 
     {% block body%}
-            <div id="lema" class="row caixa ml-auto mr-auto mt-5 ">
-                <div class="col-md-8">
-                    <div id="underlogo">
-                        <p class="first-text ">A transparência é fundamental para o crescimento dos negócios online.hehe</p>
-                    </div>
+
+            <div class="row caixa ml-auto mr-auto mt-5 ">
+                <div id="main-wrapper-text" class="col-sm-5">
+                    <h2 class="title-main">Business</h2>
+                    <h3 class="subtitle-main">Analysis<i class="fas fa-chart-bar" style="color:#007309; margin-left: 1.2rem; font-size: 3rem;"></i></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dignissim, felis in pulvinar faucibus, lacus sapien rutrum tortor.</p>
+                    <a href="#services" class="square_btn scrollsuave" style="position: absolute; left: 12vw;margin-top: 1.5rem;text-transform: uppercase;">join us</a>
                 </div>
-                <div class="col-md-12">
-                    <p class="second-text">Nossa métrica é gerar informação relevante objetivando uma melhor otimização dos investimentos de mídia online.</p>
+                <div id="mw" class="col-sm-7">
+                    <img id="main-img" src="{% static 'slices/main-01.png' %}" class="d-none d-sm-block">
                 </div>
           
             </div>
-          <div class="container d-flex justify-content-center divseta mt-3">
-              <a href="#conteudos" id="button-scroll" class="scrollsuave">
-                <i class="fas fa-arrow-down seta text-dark"></i>
-              </a>
-          </div>
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                <div id="conteudos" class="container d-flex justify-content-center div-h1-conteudos d-flex">
-                    <h1 class="h1-conteudos align-self-start" data-anime="bottom">In the News...</h1>
-                </div>
 
-          <ul class="container align-items-start caixa-noticias">
-                {% for n in news %}
-                <li id="noticia-1" class="media border-bottom p-2" data-anime="bottom">
-                    <img class="mr-3 align-self-center" src="{{ n.img_url }}" alt="imagem da notícia">
-                    <div class="media-body">
-                        <h5>{{ n.titulo }}</h5>
-                        <p>{{ n.descricao }}</p>
-                        <a href="{% url 'newsPage' n.slug n.id %}" class="btn btn-sm ml-1 clique">Clique aqui</a>
+            <section id="services">
+              <h1 class="tit2  container" id="s">
+                Services
+              </h1>
+              <div id="services-row" class="row r">
+                <div class="col-lg-6 services-col row">
+                    <div class="col-2">
+                      <img src="{% static 'slices/features1.png' %}">
                     </div>
-                  </li>
-                  {% endfor %}        
-            </ul><!-- fim caixa noticias -->
-        {% if news.lenth > 3 %}
-        <div id="botao" class="container text-center mt-2" data-anime="bottom"><!-- inicio botao -->
-          <a href="" class="">Veja mais</a>
-        </div><!-- fim botao -->
-        {% endif %}
-      <br><br><br><br><br>
-      <div class="container"><!-- inicio container clients -->
-      <section id="clients" class="row"><!-- inicio section clients -->
-        <div id="col-md-6" class="col-md-6">
-            <h1>
-              Parceiros
-            </h1>
-            <p>
-              Que enriquecem nossa métrica...
-            </p>
-            <div class="row d-flex justify content-center padding-top-20">
-              {% for parceiro in parceiros %}
-                <div class="col-4 d-flex justify-content-center flex-column">
-                  <img class="img-fluid lazyloaded" src="{{ parceiro.img_url }}">
+                    <div class="col-7">
+                      <h2>Lorem ipsum text testing</h2>
+                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper sus</p>
+                    </div>
                 </div>
-               {% endfor %} 
+                <div class="col-lg-6 services-col row">
+                  <div class="col-2">
+                    <img src="{% static 'slices/features4.png' %}">
+                  </div>
+                  <div class="col-7">
+                    <h2>Lorem ipsum text testing</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper sus</p>
+                  </div>
+                </div>
+              </div>
+              <div id="services-row" class="row r">
+                <div class="col-lg-6 services-col row">
+                    <div class="col-2">
+                      <img src="{% static 'slices/features2.png' %}">
+                    </div>
+                    <div class="col-7">
+                      <h2>Lorem ipsum text testing</h2>
+                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper sus</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 services-col row">
+                  <div class="col-2">
+                    <img src="{% static 'slices/features5.png' %}">
+                  </div>
+                  <div class="col-7">
+                    <h2>Lorem ipsum text testing</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper sus</p>
+                  </div>
+                </div>
+              </div>
+              <div id="services-row" class="row r">
+                <div class="col-lg-6 services-col row">
+                    <div class="col-2">
+                      <img src="{% static 'slices/features3.png' %}">
+                    </div>
+                    <div class="col-7">
+                      <h2>Lorem ipsum text testing</h2>
+                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper sus</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 services-col row">
+                  <div class="col-2">
+                    <img src="{% static 'slices/features6.png' %}">
+                  </div>
+                  <div class="col-7">
+                    <h2>Lorem ipsum text testing</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper sus</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <div id="news" class="mb-5" style="width: 100vw; height: 100px;"></div>
+
+            <section id="conteudos" >
+              <h1 style="margin-left: 5rem;" class="tit2 container">
+                Posts
+              </h1>
+              <div id="img-posts-wrapper">
+                <img id="img-post" src="{% static 'slices/posts-01.png' %}">
+              </div>
+              <div id="posts-wrapper" class="row">
+
+                {% for n in news %}
+                <div class="col-4 post-img-u">
+                  <img id="default" src="{% static 'slices/default.png' %}">
+                </div>
+                <div id="post-cont" class="col-7 pl-4 mb-5">
+                  <h3>{{ n.titulo }}</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>
+                  <a class="square_btn2">Click Here</a>
+                </div>
+                {% endfor %}
+              </div>
+            </section>
+
+
+  <div id="contact" style="margin-bottom: -2rem;border-top: 1px solid #f2f2f2;"></div>
+
+        <section class="container" id="conta">
+          <h1 class="tit2" id="c">
+            Contact
+          </h1>
+          <div class="row" id="this">
+            <div class="col-md-5 ">
+              <form class="d-flex align-items-center flex-column ">
+               <div class="form-grp">
+                <input type="text" name="username" id="username" placeholder="Your Name" class="form-control">
+                <i class="far fa-user"></i>
+               </div>
+                <div class="form-grp">
+                  <input type="number" name="number" id="number" placeholder="Phone Number" class="form-control">
+                  <i class="far fa-phone"></i>
+                </div>
+                <div class="form-grp">
+                  <input type="email" name="email" id="email" placeholder="E-mail" class="form-control">
+                  <i class="far fa-envelope"></i>
+                </div>
+                <div class="form-grp">
+                  <textarea type="text" name="msg" id="msg" placeholder="Your Message" class="form-control"></textarea>
+                  <i class="far fa-comment-alt"></i>
+                </div>
+                <button class="square_btn2 align-self-center" type="submit">Submit</button>
+              </form>
+            </div>
+            <div class="col-md-5" id="contact-img-wrapper">
+              <img id="contact-img" src="{% static 'slices/contact2.png' %}">
+            </div>
+          </div>
+        </section>
+
+      <div class="container mt-5">
+      <section id="parceiros" class="row">
+        <div id="col-md-6" class="col-md-6">
+            <h1 class="tit1">
+              Partners
+            </h1>
+            <div id="part" class=" d-flex justify-content-start flex-column align-items-center">
+              
+                <div  class="p-img mb-5">
+                  <img src="{% static 'slices/partners1.png' %}" width="330" height="130">
+                </div>
+                <div  class="p-img mb-5">
+                  <img src="{% static 'slices/partners2.png' %}" width="140" height="70">
+                </div>
+                <div  class="p-img mb-4 mt-3">
+                  <img src="{% static 'slices/partners3.png' %}" width="140" height="90">
+                </div>
+                <div  class="p-img mb-5">
+                  <img src="{% static 'slices/partners4.png' %}" width="230" height="140">
+                </div>
               
             </div><!-- fim row 2 -->
         </div><!-- fim col 1 -->
@@ -82,51 +189,6 @@
             }, 800);
             return false;
         });
-      </script>
-      <script>
-
-      const debounce = function(func, wait, immediate) {
-      let timeout;
-      return function(...args) {
-        const context = this;
-        const later = function () {
-          timeout = null;
-          if (!immediate) func.apply(context, args);
-        };
-        const callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
-      };
-      };
-
-
-      const target = document.querySelectorAll('[data-anime]');
-      const animationClass = 'animate';
-
-      function animeScroll() {
-        const windowTop = window.pageYOffset + ((window.innerHeight * 0.90) );
-        target.forEach(function(element) {
-
-          if((windowTop) > element.offsetTop) {
-            element.classList.add(animationClass);
-          } else {
-            element.classList.remove(animationClass);
-          }
-
-        })
-
-      }
-
-      animeScroll();
-
-
-      if(target.length) {
-        window.addEventListener('scroll', debounce(function() {
-          animeScroll();
-        }, 50));
-
-      }
       </script>
    {% endblock %}
  

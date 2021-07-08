@@ -2,14 +2,12 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect
 from django.views.generic import DetailView
 from django.urls import reverse
-from .models import News, Parceiros
+from .models import News
 # Create your views here.
 def index(request):
     news = News.objects.all()
-    parceiros = Parceiros.objects.all()
     return render(request, "main/index.html", {
         "news": news,
-        "parceiros": parceiros
     })
 def newsPage(request,slug, id): 
     try:

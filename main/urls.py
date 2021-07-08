@@ -5,6 +5,5 @@ from . import views
 
 urlpatterns = [
     path("", views.index, name="index"),
-    # path('noticias/<slug:slug>/', NewsSlugView.as_view(), name="NewsSlugView")
     path("noticias/<str:slug>/<int:id>", views.newsPage, name="newsPage"),
 ]

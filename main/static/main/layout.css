@@ -1,0 +1,82 @@
+html {
+    /* background-color: #EBFDE4; */
+    background: linear-gradient(90deg, rgba(214,255,196,1) 0%, rgba(242,254,238,1) 90%,#e8e8e8 100%);
+}
+div#page {
+height:100%;
+  
+}
+
+#row-underclients {
+    border-top: 1px solid #AAACA9;
+    margin-top: 15rem;
+}
+
+#row-underclients .col-md-6 h1 {
+    font-size: 48px;
+    font-family:Georgia, sans-serif;
+    font-weight: 600;
+}
+
+
+.contact-info p {
+    font-size: 22px;
+    color: #727272;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.info {
+    padding-bottom: 10px;
+}
+
+.info a {
+    color: black;
+    font-size: 18px;
+}
+
+
+#business>h1 {
+    font-size: 48px;
+    font-family: Georgia, sans-serif;
+    font-weight: 600;
+}
+
+
+.location {
+    text-indent: -12px;
+    padding-left: 25px;
+}
+
+nav#menu {
+  width: 100%;
+  padding-top: 23px;
+  margin-top: .8rem;
+  padding-left:2rem;
+  padding-right:2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(90deg, rgba(214,255,196,1) 0%, rgba(242,254,238,1) 93%,#e8e8e8 100%);
+}
+nav img {
+  width: 255px;
+  height: 40px;
+}
+
+nav#menu li {
+    margin-left: 4.3vw;
+}
+
+nav#menu a {
+    font-size: 1.5rem;
+    letter-spacing: .05rem;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    color: #007309;
+    transition: all .2s;
+}
+
+nav#menu a:hover {
+    color:#02A40F ;
+    /* color:#018C0C ; */
+}
